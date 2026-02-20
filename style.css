@@ -206,6 +206,7 @@ nav {
 }
 
 @media (max-width: 768px) {
+
     .nav-toggle {
         display: block;
     }
@@ -236,8 +237,12 @@ nav {
 
     /* Fixed header overlap and font size issues */
     .hero {
-        padding-top: 80px;
+        padding-top: 120px;
         /* Account for fixed header height */
+    }
+
+    .hero-content {
+        margin-top: 4rem;
     }
 
     h1 {

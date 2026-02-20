@@ -233,6 +233,20 @@ nav {
         grid-template-columns: 1fr !important;
         gap: 2rem !important;
     }
+
+    /* Fixed header overlap and font size issues */
+    .hero {
+        padding-top: 80px;
+        /* Account for fixed header height */
+    }
+
+    h1 {
+        font-size: clamp(2rem, 8vw, 2.5rem);
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
 }
 
 /* About Us Section */
@@ -366,7 +380,25 @@ nav {
     padding: 2rem;
 }
 
+.feature-icon img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    border: 2px solid var(--color-gold);
+    padding: 5px;
+}
+
 /* Contact Section & Form */
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid var(--color-gold);
+}
+
 .contact-container {
     display: grid;
     grid-template-columns: 1fr 1fr;

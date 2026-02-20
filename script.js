@@ -78,6 +78,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Timeline Observer
+    const timelineSteps = document.querySelectorAll('.timeline-step');
+    if (timelineSteps.length > 0) {
+        const observerOptions = {
+            threshold: 0.6,
+            rootMargin: '0px 0px -20% 0px'
+        };
+
+        const timelineObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                } else {
+                    // Optional: remove class to replay animation
+                    // entry.target.classList.remove('active');
+                }
+            });
+        }, observerOptions);
+
+        timelineSteps.forEach(step => timelineObserver.observe(step));
+    }
+
     // Scroll reveal animation
     const revealElements = document.querySelectorAll('.reveal');
     const revealOnScroll = () => {

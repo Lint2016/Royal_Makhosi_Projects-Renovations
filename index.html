@@ -47,6 +47,16 @@
                     <a href="#services" class="btn btn-secondary">Our Services</a>
                 </div>
             </div>
+            <!-- Scroll Indicator -->
+            <a href="#about" class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div class="arrow">
+                    <span></span>
+                    <span></span>
+                </div>
+            </a>
         </section>
 
         <!-- About Us Section -->
@@ -187,34 +197,51 @@
         </section>
 
         <!-- Process Section -->
-        <section class="section-padding bg-charcoal">
+        <section class="section-padding bg-charcoal" id="process">
             <div class="container">
                 <h2 class="section-title text-center">Our Royal <span class="text-gold">Process</span></h2>
-                <div class="process-grid"
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-top: 4rem;">
-                    <div class="process-step reveal">
-                        <div class="step-num"
-                            style="font-size: 5rem; font-weight: 700; color: rgba(200,160,89,0.1); position: absolute; top: -20px; left: 0;">
-                            01</div>
-                        <h3 style="color: var(--color-gold); position: relative; z-index: 1;">Consultation</h3>
-                        <p style="color: rgba(255,255,255,0.8);">We discuss your vision and provide a detailed
-                            assessment and professional quote.</p>
-                    </div>
-                    <div class="process-step reveal">
-                        <div class="step-num"
-                            style="font-size: 5rem; font-weight: 700; color: rgba(200,160,89,0.1); position: absolute; top: -20px; left: 0;">
-                            02</div>
-                        <h3 style="color: var(--color-gold); position: relative; z-index: 1;">Execution</h3>
-                        <p style="color: rgba(255,255,255,0.8);">Our expert team begins the work, maintaining the
-                            highest standards of safety and quality.</p>
-                    </div>
-                    <div class="process-step reveal">
-                        <div class="step-num"
-                            style="font-size: 5rem; font-weight: 700; color: rgba(200,160,89,0.1); position: absolute; top: -20px; left: 0;">
-                            03</div>
-                        <h3 style="color: var(--color-gold); position: relative; z-index: 1;">Handover</h3>
-                        <p style="color: rgba(255,255,255,0.8);">Final inspection and walkthrough to ensure every detail
-                            meets our royal standards.</p>
+
+                <div class="timeline-container">
+                    <div class="timeline-track"></div>
+
+                    <div class="process-timeline">
+                        <!-- Step 1 -->
+                        <div class="timeline-step" data-step="1">
+                            <div class="step-marker">
+                                <span class="step-dot"></span>
+                                <span class="step-label">01</span>
+                            </div>
+                            <div class="step-content">
+                                <h3>Consultation</h3>
+                                <p>We discuss your vision and provide a detailed assessment and professional quote.</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="timeline-step" data-step="2">
+                            <div class="step-marker">
+                                <span class="step-dot"></span>
+                                <span class="step-label">02</span>
+                            </div>
+                            <div class="step-content">
+                                <h3>Execution</h3>
+                                <p>Our expert team begins the work, maintaining the highest standards of safety and
+                                    quality.</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="timeline-step" data-step="3">
+                            <div class="step-marker">
+                                <span class="step-dot"></span>
+                                <span class="step-label">03</span>
+                            </div>
+                            <div class="step-content">
+                                <h3>Handover</h3>
+                                <p>Final inspection and walkthrough to ensure every detail meets our royal standards.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -312,6 +339,13 @@
                 </div>
             </div>
         </section>
+        <!-- Floating WhatsApp Toggle -->
+        <a href="https://wa.me/27782179380" class="floating-whatsapp" target="_blank"
+            aria-label="Chat with us on WhatsApp">
+            <img src="assets/whatsapp.jpg" alt="WhatsApp Icon">
+            <span class="whatsapp-tooltip">Chat with us!</span>
+        </a>
+
     </main>
 
     <!-- Footer -->

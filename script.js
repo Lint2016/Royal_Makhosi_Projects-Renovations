@@ -36,26 +36,45 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Form Submission (Simulated)
+    // Form Submission (WhatsApp Redirect)
     const quoteForm = document.getElementById('quote-form');
     if (quoteForm) {
         quoteForm.addEventListener('submit', (e) => {
             e.preventDefault();
+
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const service = document.getElementById('service').options[document.getElementById('service').selectedIndex].text;
+            const message = document.getElementById('message').value;
+
+            // WhatsApp Number
+            const phoneNumber = "27782179380"; // No + or spaces for the link
+
+            // Construct the message
+            const waMessage = `Hello Royal Makhosi team! I have a new project request:
+            
+*Name:* ${name}
+*Email:* ${email}
+*Service:* ${service}
+*Details:* ${message}`;
+
+            // Encode and Redirect
+            const encodedMessage = encodeURIComponent(waMessage);
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+            // Visual feedback before redirect
             const btn = quoteForm.querySelector('button');
             const originalText = btn.textContent;
-            
-            btn.textContent = 'Processing...';
-            btn.style.opacity = '0.7';
+            btn.textContent = 'Redirecting to WhatsApp...';
             btn.disabled = true;
 
-            // Simulate API call
             setTimeout(() => {
-                alert('Success! Your request has been sent to the Royal Makhosi team. We will contact you shortly.');
-                quoteForm.reset();
+                window.open(whatsappUrl, '_blank');
                 btn.textContent = originalText;
-                btn.style.opacity = '1';
                 btn.disabled = false;
-            }, 1800);
+                quoteForm.reset();
+            }, 1000);
         });
     }
 
@@ -63,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const revealElements = document.querySelectorAll('.reveal');
     const revealOnScroll = () => {
         const triggerBottom = window.innerHeight * 0.85;
-        
+
         revealElements.forEach(el => {
             const elTop = el.getBoundingClientRect().top;
             if (elTop < triggerBottom) {

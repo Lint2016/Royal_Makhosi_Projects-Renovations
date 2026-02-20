@@ -247,10 +247,11 @@ nav {
     margin-bottom: 1.5rem;
 }
 
-.about-img img {
+.about-img video {
     width: 100%;
     border-radius: 4px;
     box-shadow: var(--shadow-premium);
+    display: block;
 }
 
 /* Hero Section */

@@ -104,6 +104,12 @@ p {
     padding: 0 var(--spacing-md);
 }
 
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1.2rem;
+    }
+}
+
 .section-padding {
     padding: var(--spacing-xl) 0;
 }
@@ -229,16 +235,11 @@ nav {
         display: flex;
     }
 
-    .about-grid,
-    .contact-container {
+    .about-grid {
         grid-template-columns: 1fr !important;
         gap: 2rem !important;
     }
 
-    /* Fixed header overlap and font size issues */
-    .hero {
-        /* Padding handled by base class for consistency */
-    }
 
     .hero-content {
         margin-top: 4rem;
@@ -570,6 +571,23 @@ nav {
     padding: 3.5rem;
     border-radius: 4px;
     box-shadow: var(--shadow-premium);
+}
+
+@media (max-width: 992px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .contact-form {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form {
+        padding: 1.5rem;
+    }
 }
 
 .form-group {
